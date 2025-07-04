@@ -4,7 +4,7 @@ const fs = require('fs');
 // 异步读取
 fs.readFile('./座右铭.txt',(err,data)=>{
     if(err){
-        console.log("push写入失败")
+        console.log("push写入失败2")
 return
     }
     console.log(data.toString())
