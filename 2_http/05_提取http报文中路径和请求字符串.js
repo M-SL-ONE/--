@@ -5,10 +5,15 @@ const url = require('url');
 // 2、创建服务对象
 const server = http.createServer((request, response) => {
   // console.log(request.url)
-  let res = url.parse(request.url,true)
-  console.log(res.pathname)
+  let res = url.parse(request.url,true);
+  console.log(res)
+  console.log(res.pathname) // 路径
   console.log(res.query.wd)
-  // console.log(res.query)
+
+
+
+
+
   response.end("hello")
 
 });

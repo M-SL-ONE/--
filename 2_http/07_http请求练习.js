@@ -5,7 +5,9 @@ const http = require('http');
 const server = http.createServer((request, response) => {
     // console.log(response)
     response.setHeader('content-type', 'text/html;charset=utf-8')
+// let { method } = request → 提取 HTTP 请求方法（GET/POST/PUT/DELETE 等）。
 
+// let { pathname } = new URL(...) → 提取请求路径（如 /api/users），忽略查询参数。
     let { method } = request;  // 解构赋值
     let { pathname } = new URL(request.url,'http://127.0.0.1')
     console.log(method)
@@ -15,7 +17,7 @@ const server = http.createServer((request, response) => {
     } else if (method === 'GET' && pathname === '/reg') {
         response.end("注册页面! ");  // 设置响应体
     } else{
-        response.end("404! ");  // 设置响应体
+        response.end("not found! ");  // 设置响应体
     }
     // response.end("注册页面! ");
 });

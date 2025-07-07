@@ -6,12 +6,12 @@ const server = http.createServer((request,response)=>{
     // 获取请求方法
     // console.log(request.method)  
     // 获取请求的url
-    // console.log(request.url) // 只包含url中的路径和查询字符串
+    console.log(request.url) // 只包含url中的路径和查询字符串
     // 
     // console.log(request.httpVersion)
     // 获取http的请求头
-    console.log(request.headers.host)
-    // response.setHeader('content-type','text/html;charset=utf-8')
+    // console.log(request.headers.host)
+    response.setHeader('content-type','text/html;charset=utf-8')
     response.end("你好! ");  // 设置响应体
 });
 

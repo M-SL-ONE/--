@@ -5,7 +5,7 @@ const http = require('http');
 const server = http.createServer((request,response)=>{
     // console.log(response)
     response.setHeader('content-type','text/html;charset=utf-8')
-    response.end("你好! ");  // 设置响应体
+    response.end("你好呀! ");  // 设置响应体
 });
 
 // 3、监听端口，启动服务
